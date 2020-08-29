@@ -11,7 +11,7 @@ import com.alibaba.druid.sql.parser.SQLStatementParser;
 public class DruidTest {
 
     public static void main(String[] args) {
-        String sql = "select * from user left join (select x from b where ba > 23) as b on user.a = b.a where dt > 32 and a < 12 order by id";
+        String sql = "select * from user left join ( select x from b where ba > 23 ) as b on user.a = b.x where dt > 32 and a < 12 order by id";
 
         // 新建 MySQL Parser
         SQLStatementParser parser = new MySqlStatementParser(sql);
